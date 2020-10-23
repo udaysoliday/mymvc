@@ -4,9 +4,7 @@ pipeline {
         
         stage('clone repo and clean') { 
             steps {
-                 dir ('my-app')
-                 {deleteDir()}
-                
+                               
                 bat "mvn clean"
             }
         }
