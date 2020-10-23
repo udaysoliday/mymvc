@@ -1,19 +1,17 @@
 pipeline {
     agent any 
-    stages {
-        
-        stage('clone repo and clean') { 
-            steps {
-                               
+    stages {        
+        stage('---clean---') { 
+            steps {                               
                 bat "mvn clean"
             }
         }
-        stage('Test') { 
+        stage('---Test--') { 
             steps {
                 bat "mvn test"
             }
         }
-        stage('Deploy') { 
+        stage('---Deploy---') { 
             steps {
                 bat "mvn package" 
             }
